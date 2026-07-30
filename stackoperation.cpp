@@ -1,59 +1,91 @@
 #include<iostream>
 using namespace std;
-#define max 5
-int stack[max];
-int Top=0;
-int isfull(){
-    if(Top==max-1)
-    {
-        return 1;
-    }
+
+#define MAX 5
+
+int stack[MAX];
+int Top = -1;
+
+int isfull()
+{
+    return Top == MAX - 1;
 }
+
+int isempty()
+{
+    return Top == -1;
+}
+
 void push(int value)
 {
     if(isfull())
     {
-        cout<<"Stack is overflow";
+        cout << "Stack Overflow\n";
     }
-    else{
-        stack[Top]=value;
+    else
+    {
         Top++;
+        stack[Top] = value;
     }
 }
+
 void pop()
 {
-    cout<<"\nDelete value: "<<stack[Top];
-    int dvalue=stack[Top];
-
-    Top--;
+    if(isempty())
+    {
+        cout << "Stack Underflow\n";
+    }
+    else
+    {
+        cout << "Deleted value: " << stack[Top] << endl;
+        Top--;
+    }
 }
+
 void peek()
 {
-    cout<<"TOP most element in stack:"<<stack[Top];
-}
-void Display()
-{
-    for (int i = 0; i <Top; i++)
+    if(isempty())
     {
-    cout<<stack[i]<<endl;
+        cout << "Stack is Empty\n";
     }
-    
-    // cout<<stack;
+    else
+    {
+        cout << "Top element: " << stack[Top] << endl;
+    }
+}
+
+void display()
+{
+    if(isempty())
+    {
+        cout << "Stack is Empty\n";
+        return;
+    }
+
+    cout << "Stack elements:\n";
+
+    for(int i = Top; i >= 0; i--)
+    {
+        cout << stack[i] << endl;
+    }
 }
 
 int main()
 {
-    int a[max];
-  for(int i =0;i<max;i++)
-  {
-    cin>>a[i];
-  }
-  for(int i=0;i<max;i++)
-  {
-      push(a[i]);
-  }
- 
-   Display();
+    int a[] = {10,20,30,40,50};
+
+    for(int i=0;i<5;i++)
+    {
+        push(a[i]);
+    }
+
+    display();
+
+    peek();
+
+    pop();
+
+    display();
 
     return 0;
 }
