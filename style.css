@@ -1,6 +1,14 @@
+<<<<<<< HEAD
 p{
     background-color: red;
 }
 h1{
     background-color: aqua;
+=======
+h1{
+    background-color: blue;
+}
+body{
+    background-color: azure;
+>>>>>>> feature1
 }
