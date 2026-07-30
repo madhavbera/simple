@@ -19,11 +19,12 @@ int main()
     printf("linked each node to each other\n");
     head->next=first;
     first->next=second;
+    second->next=NULL;
    struct demo *temp=head;
     while (temp!=NULL)
     {
        printf("%d ->",temp->data);
-      temp= temp->next;
+       temp=temp->next;
     }
     printf("NULL\n");
     
