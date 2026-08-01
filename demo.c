@@ -21,12 +21,19 @@ int main()
     first->next=second;
     second->next=NULL;
    struct demo *temp=head;
+   int count;
+   int sum=0;
     while (temp!=NULL)
     {
        printf("%d ->",temp->data);
+       count++;
+       sum=sum+temp->data;
        temp=temp->next;
     }
+    int mean=sum/count;
     printf("NULL\n");
+    printf("Number of node which is connected to each other:%d\n",count);
+    printf("Mean:%d\n",mean);
     
 
 
