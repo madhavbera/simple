@@ -1,8 +1,12 @@
-import numpy as nm
-from scipy import stats
 import statistics
 print("I am a python programming language")
+print("I am used for any type of technology")
+print("hellow")
+print("world")
 print("I am a easiest one")
+
+print("we use this language like writing english language")
+
 print("we use this language like writing english language")
 data=[1,2,3,4,5,6,6,6]
 # mean=nm.mean(data)
@@ -36,4 +40,6 @@ for j in range(len(v2)):
     p.append(v1[i]*v2[i])
 print("sum of two vector:",s)
 print("product of two vector:",p)
+print("first quartile:",q1)
+print("third quartile:",q3)
 
