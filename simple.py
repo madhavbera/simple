@@ -41,4 +41,4 @@ for j in range(len(v2)):
 print("sum of two vector:",s)
 print("product of two vector:",p)
 
-# >>>>>>> feature1
+
