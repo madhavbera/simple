@@ -1,4 +1,4 @@
-
+import statistics
 print("I am a python programming language")
 print("I am used for any type of technology")
 print("hellow")
@@ -40,5 +40,3 @@ for j in range(len(v2)):
     p.append(v1[i]*v2[i])
 print("sum of two vector:",s)
 print("product of two vector:",p)
-
-
